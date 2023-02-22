@@ -24,7 +24,10 @@ const Articles = () => {
           </div>
         ))}
 
-      {!articles && [1, 2, 3, 4, 5].map((num) => <SkeletonArticle key={num} />)}
+      {!articles &&
+        [1, 2, 3, 4, 5].map((num) => (
+          <SkeletonArticle key={num} theme="light" />
+        ))}
     </div>
   );
 };
