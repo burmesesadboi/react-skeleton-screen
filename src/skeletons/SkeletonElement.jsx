@@ -1,4 +1,4 @@
-import "./SkeletonElement.css";
+import "./Skeleton.css";
 
 const SkeletonElement = ({ type }) => {
   const classes = `skeleton ${type}`;
