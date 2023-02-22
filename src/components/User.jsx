@@ -5,10 +5,12 @@ const User = () => {
   const [profile, setProfile] = useState(null);
   useEffect(() => {
     setTimeout(async () => {
-      const res = await fetch("https://jsonplaceholder.typicode.com/users/1");
+      const res = await fetch("https://jsonplaceholder.typicode.com/users");
       const data = await res.json();
 
-      setProfile(data);
+      const newData = data[Math.floor(Math.random() * data.length)];
+
+      setProfile(newData);
     }, 5000);
   }, []);
 
